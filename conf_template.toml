@@ -1,0 +1,48 @@
+# *Lines beginning with '#' are considered comments and ignored*
+
+[twilio]
+sid = ""
+token = ""
+from_num = "your twilio number (e.g. +12025551234)"
+to_num = "number to text (e.g. +12025551234)"
+
+[telegram]
+token = ""
+chat_id = ""
+
+# Use this section to specify your desired delivery windows
+# > Days without slot preferences will be ignored
+# > A day with the name 'Any' will check for slots on any day
+#   >> Using the keyword 'Any' within this day will assume no slot preference
+#      and alert / checkout with the first available slot
+
+[slot_preference]
+Any = [
+  "Any",
+  # "11:00 AM - 1:00 PM"
+]
+today = [
+  # "Any",
+  # "1:00 PM - 3:00 PM",
+  # "3:00 PM - 5:00 PM"
+]
+tomorrow = [
+  # "Any",
+  # "3:00 PM - 5:00 PM",
+  # "11:00 AM - 1:00 PM"
+]
+
+[options]
+# To checkout using Amazon Smile, uncomment the following line
+# use_smile = true
+
+# For use with automatic checkout:
+# > Specify the last 4 digits of your preferred payment method
+# > If no card info is provided, your default payment method will be used
+preferred_card = ""
+
+# Path of an existing Chrome profile:
+# e.g. - "/Users/{user}/Library/Application Support/Google/Chrome/Default/"
+# > Note: only one Chrome session per profile may be open simultaneously
+# > If blank, a new profile will be created in the project directory
+chrome_data_dir = ""
