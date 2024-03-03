@@ -127,4 +127,3 @@ python run.py --debug
 ```
 ---
 
-*Inspiration credit: [this much more interestingly named project](https://github.com/johntitus/bungholio)*
